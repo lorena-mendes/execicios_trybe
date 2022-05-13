@@ -24,3 +24,17 @@ if (x > y) {
 } else {
     console.log("y é maior que x")
 }
+
+//Faça um programa que retorne o maior de três números. Defina no começo do programa três constantes com os valores que serão comparados.
+
+const h = 96;
+const i = 14;
+const c = 37;
+
+if (h > i && h > c) {
+    console.log("h é o maior número")
+ } else if (i > h && i > c) {
+    console.log("i é o maior número")
+ } else {
+    console.log("c é o maior número")
+ };
