@@ -1,63 +1,15 @@
-//Crie uma constante chamada "currentHour" que recebe um número entre 4 e 24 de sua escolha, para representar as horas do dia.
+//Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b, definidas no começo com os valores que serão operados. Faça programas para:
+//Adição (a + b)
+//Subtração (a - b)
+//Multiplicação (a * b)
+//Divisão (a / b)
+//Módulo (a % b)
 
-const currentHour = 21;
+const a = 30;
+const b = 10;
 
-//Crie uma variável chamada "message" que, inicialmente, é uma string vazia.
-
-let message = "";
-
-//Implemente condicionais para que:
-//Se o horário for maior ou igual a 22, insira "Não deveríamos comer nada, é hora de dormir" na variável "message".
-//Se o horário for maior ou igual a 18 e menor que 22, insira "Rango da noite, vamos jantar :D" na variável "message".
-//Se o horário for maior ou igual a 14 e menor que 18, insira "Vamos fazer um bolo pro café da tarde?" na variável "message".
-//Se o horário estiver entre 11 e 14, insira "Hora do almoço!!!" na variável "message".
-//Se o horário estiver entre 4 e 11, insira "Hmmm, cheiro de café recém passado" na variável "message".
-
-if (currentHour >= 22) {
-    console.log("Não deveríamos comer nada, é hora de dormir")
-} else if (currentHour >=18 && currentHour <22) {
-    console.log("Rango da noite, vamos jantar :D")
-} else if (currentHour >=14 && currentHour <18) {
-    console.log("Vamos fazer um bolo pro café da tarde?")
-} else if (currentHour >11 && currentHour <14) {
-    console.log("Hora do almoço!!!")
-} else {
-    console.log("Hmmm, cheiro de café recém passado")
-}
-
-//Agora imprima a variável message fora das suas condições.
-
-console.log(message);
-
-//Crie uma variável chamada "weekDay" que recebe a string "quarta-feira".
-
-let weekDay = "quarta-feira";
-
-//Implemente condicionais para que:
-//Se nossa variável "weekDay" for "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira" ou "sexta-feira", imprima "Oba, mais um dia de aprendizado na Trybe >:D".
-//Se for algum dia de fim de semana, imprima "FINALMENTE, descanso merecido UwU".
-
-if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "quarta-feira" || weekDay === "quinta-feira" || weekDay === "sexta-feira") {
-    console.log("Oba, mais um dia de aprendizado na Trybe >:D")
-} else {
-    console.log("FINALMENTE, descando merecido UwU")
-}
-
-//Crie uma variável para armazenar o estado da pessoa candidata no processo seletivo, que pode ser: 'aprovada', 'lista' ou 'reprovada';
-
-let situacao = "lista";
-
-switch (situacao) {
-    case "aprovada":
-        console.log("Parabéns, você foi aprovada(o).");
-        break;
-    case "lista":
-        console.log("Você está na lista de espera.");
-        break;
-    case "reprovada":
-        console.log("Que pena, você foi reprovada(o).");
-        break
-    default:
-        console.log("Não se aplica.")
-}
-
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
