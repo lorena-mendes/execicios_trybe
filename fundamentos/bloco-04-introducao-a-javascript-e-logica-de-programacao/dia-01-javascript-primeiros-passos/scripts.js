@@ -42,3 +42,22 @@ if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "qu
 } else {
     console.log("FINALMENTE, descando merecido UwU")
 }
+
+//Crie uma variável para armazenar o estado da pessoa candidata no processo seletivo, que pode ser: 'aprovada', 'lista' ou 'reprovada';
+
+let situacao = "lista";
+
+switch (situacao) {
+    case "aprovada":
+        console.log("Parabéns, você foi aprovada(o).");
+        break;
+    case "lista":
+        console.log("Você está na lista de espera.");
+        break;
+    case "reprovada":
+        console.log("Que pena, você foi reprovada(o).");
+        break
+    default:
+        console.log("Não se aplica.")
+}
+
