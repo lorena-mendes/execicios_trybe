@@ -1,26 +1,22 @@
-//7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
-//Porcentagem >= 90 -> A
-//Porcentagem >= 80 -> B
-//Porcentagem >= 70 -> C
-//Porcentagem >= 60 -> D
-//Porcentagem >= 50 -> E
-//Porcentagem < 50 -> F
-//O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
+//8. Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
+const x = 3;
+const y = 5;
+const z = 1;
 
-let nota = 49;
-
-if (nota < 0 || nota > 100) {
-    console.log("Erro!!! Nota inválida.")
-} else if (nota >=90) {
-    console.log("--> A");
-} else if (nota >= 80 && nota <90) {
-    console.log("--> B");
-} else if (nota >=70 && nota< 80){
-    console.log("--> C")
-} else if (nota >=60 && nota <70) {
-    console.log("--> D")
-} else if (nota >= 50 && nota < 60) {
-    console.log("--> E")
+if ((x % 2 === 0 || y % 2 === 0 || z % 2 === 0)) {
+    console.log("true")
 } else {
-    console.log("--> F")
+    console.log("false")
+};
+
+//9. Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
+
+const a = 8;
+const b = 10;
+const c = 12;
+
+if ((a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0)) {
+    console.log("true")
+} else {
+    console.log("false")
 };
