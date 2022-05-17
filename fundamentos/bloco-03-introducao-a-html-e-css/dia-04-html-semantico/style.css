@@ -1,3 +1,22 @@
+body {
+  display: block;
+}
+nav {
+  border: 4px solid red;
+}
+section {
+  border: 4px solid red;
+}
+aside {
+  border: 4px solid red;
+}
+footer {
+  border: 4px solid red;
+}
+main {
+  border: 4px solid red;
+  display: inline-block;
+}
 
 #cabecalho {
   font-size: 60px;
@@ -10,15 +29,19 @@
 #nav ul li {
   display: inline-block;
   font-size: 20px;
-  width: 150px;
 }
 
-.artigo {
+article {
   color: darkblue;
+  border: 4px solid red;
 }
 
 h1 {
   text-align: center;
   font-family: 'Courgette', cursive;
   font-size: 40px;
+}
+#img-stomatopoda {
+  width: 280px;
+  float: right;
 }
