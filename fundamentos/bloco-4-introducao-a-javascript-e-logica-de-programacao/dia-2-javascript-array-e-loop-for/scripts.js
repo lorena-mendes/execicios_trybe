@@ -55,3 +55,29 @@ if (resultado === 0) {
 } else {
     console.log(resultado);
 }
+
+//7.Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+
+let menorNumero = numbers[0];
+
+for (let index = 1; index < numbers.length; index += 1) {
+    if (numbers[index] < menorNumero) {
+        menorNumero = numbers[index]
+    }
+}
+console.log(menorNumero);
+
+//8.Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
+
+let numeros = [];
+
+for (let index = 1; index <= 25; index += 1) {
+    numeros.push(index);
+}
+console.log(numeros);
+
+//9.Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
+
+for (let index = 0; index < numeros.length; index += 1) {
+    console.log(numeros[index] / 2);
+}
