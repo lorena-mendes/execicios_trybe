@@ -98,7 +98,7 @@ for (let index = 0; index <= valor; index += 1) {
 let meio = (valor +1) / 2;
 let controlLeft = meio;
 let controlRight = meio;
-let inputPosition = valor;
+// let inputPosition = valor;
 for (let index = 0; index <= meio; index += 1) {
     for (let index2 = 0; index2 <= valor; index2 +=1) {
         if (index2 > controlLeft && index2 < controlRight) {
