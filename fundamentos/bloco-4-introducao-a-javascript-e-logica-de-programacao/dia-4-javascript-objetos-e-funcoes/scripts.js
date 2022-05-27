@@ -203,3 +203,135 @@ let info2 = {
 
 console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos');
 
+// Exercícios parte II - Funções
+
+//1.Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+
+function verificaPalindrome (palavra) {
+    let reverse = palavra.split('').reverse().join('');
+    if (reverse === palavra) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(verificaPalindrome('arara'));
+console.log(verificaPalindrome('desenvolvimento'));
+
+
+//2.Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+//Array de teste: [2, 3, 6, 7, 10, 1];.
+
+// function maiorValor (numeros) {
+//     let maior = 0;
+//     for (let index in numeros) {
+//         if (numeros[maior] < numeros[index]) {
+//             maior = index;
+//         }
+//     }
+//     return maior;
+// }
+// console.log(maiorValor([2, 3, 6, 7, 10, 1]));
+
+//3.Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+function menorValor (numeros) {
+    let menor = 0;
+    for (let index in numeros) {
+        if (numeros[menor] > numeros[index]) {
+            menor = index;
+        }
+    }
+    return menor;
+}
+console.log(menorValor([2, 4, 6, 7, 10, 0, -3]));
+
+//4.Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+function maiorPalavra (palavras) {
+    let maiorPalavra = palavras[0];
+    for (let palavra of palavras) {
+        if (maiorPalavra.length < palavra.length) {
+            maiorPalavra = palavra;
+        }
+    }
+    return maiorPalavra;
+}
+console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+//5.Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+function maiorValor (numeros) {
+    let maior = 0;
+    for (let index in numeros) {
+        if (numeros[maior] < numeros[index]) {
+            maior = index;
+        }
+    }
+    return maior;
+}
+
+function calculaInteiroRepete(number){
+    let arrayIndexCont = [];
+    for (let index = 0; index < number.length; index += 1){
+        let cont = 0;
+        for (let index2 = 0; index2 < number.length; index2 += 1) {
+          if (number[index] === number[index2]) {
+            cont +=1;
+          };
+        };
+        arrayIndexCont.push(cont)
+      };
+      return arrayIndexCont
+}
+
+let arrayValido = [2, 3, 2, 5, 8, 2, 3]
+let resultadoCalculaInteiro = calculaInteiroRepete(arrayValido);
+let indexMaior = maiorValor(resultadoCalculaInteiro)
+console.log(arrayValido[indexMaior]);
+
+//6. Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+
+function somatorioTodosNumeros(numero) {
+    let somatorio = 0;
+    for (let index = 0; index <= numero; index += 1) {
+        somatorio = somatorio + index
+    }
+    return somatorio;
+}
+console.log(somatorioTodosNumeros(5));
+
+//7.Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+
+function verificaPalavra (word, ending) {
+    word = word.split('');
+    ending = ending.split('');
+    console.log(word, ending)
+    for (let index = 0; index < ending.length; index +=1){
+        if (word[word.length - ending.length + index] != ending[index]) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    return verificaPalavra;
+}
+
+console.log(verificaPalavra('trybe', 'be'));
+console.log(verificaPalavra('joaoFernando', 'fernan'));
+
+//Bônus
+
+const romanos = {
+    i:1,
+    v:5,
+    x:10,
+    l:50,
+    c:100,
+    d:500,
+    m:1000,
+}
+for (let numero in romanos) {
+}
+console.log(romanos);
