@@ -35,3 +35,26 @@ console.log(elementoOndeVoceEsta.nextElementSibling);
 
 console.log(pai.firstElementChild.nextElementSibling.nextElementSibling);
 
+//Parte II - Criando elementos
+//1.Crie um irmão para elementoOndeVoceEsta.
+
+let criaIrmao = document.createElement('section')
+criaIrmao.id = 'criaIrmao';
+pai.appendChild(criaIrmao);
+
+//.2.Crie um filho para elementoOndeVoceEsta.
+
+let criandoFilho = document.createElement('section');
+criandoFilho.id = 'criandoFilho';
+elementoOndeVoceEsta.appendChild(criandoFilho);
+
+//3.Crie um filho para primeiroFilhoDoFilho.
+
+let criandoFilho2 = document.createElement('section');
+criandoFilho2.id = 'criandoFilho2';
+primeiroFilhoDoFilho.appendChild(criandoFilho2);
+
+//4.A partir desse filho criado, acesse terceiroFilho.
+
+console.log(criandoFilho2.parentElement.parentElement.nextElementSibling);
+
