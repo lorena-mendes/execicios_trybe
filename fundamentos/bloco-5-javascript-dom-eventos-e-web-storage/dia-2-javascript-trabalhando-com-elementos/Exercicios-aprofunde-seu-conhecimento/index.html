@@ -95,6 +95,7 @@
       let adicionaSection3 = document.createElement('section');
       adicionaSection3.className = ".right-content";
       adicionaMain.appendChild(adicionaSection3);
+      
 
       //7.Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
 
@@ -128,14 +129,48 @@
 
       //9.Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
 
-      let adicionaPrimeiroH3 = document.createElement('h3');
-      adicionaMain.appendChild(adicionaPrimeiroH3);
+      for (let i = 1; i <= 3; i +=1) {
+        let adicionaH3 = document.createElement('h3');
+        adicionaMain.appendChild(adicionaH3)
+        adicionaH3.className = '.description';
+      };
+      
+      //1.🚀 Adicione a classe title na tag h1 criada;
 
-      let adicionaSegundoH3 = document.createElement('h3');
-      adicionaMain.appendChild(adicionaSegundoH3);
+      adcionaH1.className = '.title'
 
-      let adicionaTerceiroH3 = document.createElement('h3');
-      adicionaMain.appendChild(adicionaTerceiroH3);  
+      //2.🚀 Adicione a classe description nas 3 tags h3 criadas;
+
+
+      //3.🚀 Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+
+      adicionaMain.removeChild(adicionaSection2);
+
+      //4.🚀 Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+
+      adicionaSection3.style.marginRight = "auto";
+
+
+      //5.🚀 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+
+      adicionaMain.style.backgroundColor = 'green';
+
+
+      //6.🚀 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+
+      let remove = document.querySelectorAll('li');
+    
+      for (let index = 0; index < remove.length; index += 1) {
+        if (remove[index].innerText == 'Nove' || remove[index].innerText == 'Dez') {
+          listaNum.removeChild(remove[index]);        
+        }
+      
+      }
+
+
+
+
+
 
     </script>
   </body>
