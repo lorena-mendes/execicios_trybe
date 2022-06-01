@@ -71,9 +71,49 @@ function createDaysOfTheWeek() {
     clickB.addEventListener("click", recebeClick);
     
     function recebeClick () {
+      let feriadoCor = document.querySelectorAll('.holiday');
+      for (feriado of feriadoCor) {
+        if ( feriado.style.backgroundColor == 'pink') {
+          feriado.style.backgroundColor = 'rgb(238,238,238)'
+        } else {
+          feriado.style.backgroundColor = 'pink';
+        };
+      };
+    };
 
+    //4.Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+    //Adicione a este botão o ID "btn-friday".
+    //Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
+
+    function sextaFeira (parametro) {
+      let botao = document.createElement('button');
+      botao.id = 'btn-friday';
+      botao.innerHTML = parametro;
+      let buttonsContainer = document.querySelector('.buttons-container');
+      buttonsContainer.appendChild(botao);
     }
+    sextaFeira('Sexta-feira');
 
+    //5.Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+    //É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+
+    let addClick = document.getElementById('btn-friday');
+    addClick.addEventListener('click', adicionaBotao);
+    
+    let datas = [];
+
+    function adicionaBotao () {
+      let modificaTexto = document.querySelectorAll('.friday');
+      for (let index = 0; index < modificaTexto.length; index += 1) {
+        if (modificaTexto[index].innerText == 'SEXTOU O/') {
+          modificaTexto[index].innerText = datas.shift();
+        } else {
+          datas.push(modificaTexto[index].innerText)
+          modificaTexto[index].innerText = 'SEXTOU O/'
+        }
+      }      
+    }
+    
 
   
 
