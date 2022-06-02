@@ -3,34 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox - Align Content</title>
+    <title>Flexbox - Flex Flow</title>
     <style>
       .box {
         color: #9069EF;
         background-color: rgb(243, 243, 243);
         border: 2px solid #232525;
         font-size: 50px;
-        min-height: 60px;
+        height: 60px;
         margin: 10px 5px;
         text-align: center;
         width: 30%;
       }
 
       .box-container {
-        /* ADICIONE AQUI SEUS TESTES */
-
-        /* align-content: center; */
-        /* align-content: flex-start; */
-        /* align-content: flex-end; */
-        /* align-content: stretch; */
-        /* align-content: space-around; */
-        /* align-content: space-between; */
-
         background-color: #0fa36b;
         display: flex;
+        
+        /* ADICIONE AQUI SEUS TESTES */
+        
+        flex-direction: row;
+        flex-direction: row-reverse;
+        flex-direction: column;
+        flex-direction: column-reverse; 
+
         flex-wrap: wrap;
-        height: 600px;
+        flex-wrap: nowrap;
+
+        flex-flow: initial;
+
       }
+
     </style>
 
   </head>
@@ -41,10 +44,10 @@
       <div class="box">3</div>
       <div class="box">4</div>
       <div class="box">5</div>
-      <div class="box">6</div>
-      <div class="box">7</div>
-      <div class="box">8</div>
-      <div class="box">9</div>
     </div>
   </body>
 </html>
+
+<!-- 1 - Teste as possibilidades (row, column, row-reverse e column-reverse) para a propriedade flex-direction.
+2 - Teste as possibilidades (wrap e nowrap) para a propriedade flex-wrap.
+3 - Teste as possibilidades para a propriedade flex-flow. -->
