@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fomulário</title>
 </head>
 <body>
-    
+  <h1>FORMULÁRIO</h1>
+  <fieldset>
+  <form action="" method="get">
+    <label for="input-text">Nome completo:</label>
+    <input type="text" name="" id="input-text" minlength="10" maxlength="40">
+    <br>
+    <label for="input-mail">E-mail:</label>
+    <input type="email" name="" id="input-mail" minlength="10" maxlength="50">
+    <br>
+    <p>Destino preferido:</p>
+    <label for="option1"><input type="radio" id="option1" value="op1" name="option"> Cidade</label>
+    <label for="option2"><input type="radio" id="option2" value="op2" name="option"> Campo</label>
+    <label for="option3"><input type="radio" id="option3" value="op3" name="option"> Praia</label>
+    <label for="option4"><input type="radio" id="option4" value="op4" name="option"> Montanhas</label>
+    <br>
+    <label for="texto">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+    <br>
+    <textarea type="text" name="" id="texto" cols="60" rows="10" maxlength="500" style="resize:none" ></textarea>
+    <br>
+    <label for="date"> Qual a melhor data para realizar sua viagem?<input type="date" id="date" value="" name="date"></label>
+    <br>
+    <p>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</p>
+    <label for="yes"><input type="radio" id="yes" value="sim" name="autorizacao"> Sim </label>
+    <label for="no"><input type="radio" id="no" value="nao" name="autorizacao"> Não </label>
+    <br>
+    <p>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros:</p>
+    <label for="agree"><input type="radio" name="concordo" id="agree"> Sim</label>
+    <label for="not-agree"><input type="radio" name="discordo" id="not-agree">Não</label>
+    <label for=""></label>
+    <br>
+    <button type="submit" id="submit">Enviar</button>
+    <button type="reset">Apagar</button>
+  </fieldset>
+  </form> 
+  <script src="script.js"></script>   
 </body>
 </html>
+
+  
