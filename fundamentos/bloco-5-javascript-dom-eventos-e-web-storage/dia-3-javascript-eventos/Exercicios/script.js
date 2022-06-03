@@ -194,4 +194,24 @@ function createDaysOfTheWeek() {
   //Se nenhum caractere for inserido no campo input, a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
   //Ao pressionar a tecla "enter" o evento também deverá ser disparado.
 
+  let taskInput = document.getElementById('task-input');
+  let btnAdd = document.getElementById('btn-add');
+  let taskList = document.querySelector('.task-list');
 
+  function addCompromisso () {
+    if (!taskInput.value) {
+      return alert ('ERRO! Campo vazio.')
+    }
+    const listaCompromissoItem = document.createElement('li');
+    listaCompromissoItem.innerHTML = taskInput.value;
+    taskList.appendChild(listaCompromissoItem);
+    taskInput.value = ''
+  }
+  btnAdd.addEventListener('click', addCompromisso);
+
+  // let limpar = document.getElementById('btn-remove');
+  
+  // function limpaCampo () {
+  //   taskInput.value = ''
+  // }
+  // limpar.addEventListener('click', limpaCampo);
