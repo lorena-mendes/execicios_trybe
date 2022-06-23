@@ -1,4 +1,4 @@
-//. Para fixar forEach
+//. Para fixar - forEach
 //1. Use o método forEach chamando a callback showEmailList para apresentar os emails
 
 const emailListInData = [
@@ -13,7 +13,7 @@ const emailListInData = [
   };  
   emailListInData.forEach(showEmailList);
 
-  // Para fixar find
+  // Para fixar - find
   //1. Utilize o find para retornar o primeiro número do array que é divisível por 3 e 5, caso ele exista:
 
   const numbers = [19, 21, 30, 3, 45, 22, 15];
@@ -45,7 +45,7 @@ function findMusic(id) {
 };
 console.log(findMusic('31031685'));
 
-//Para fixar some e every
+//Para fixar - some e every
 //1. Escreva uma função que dado um array de nomes e um nome retorne true se ele estiver contido e caso contrário, retorne false, use some;
 
 const nomes = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
@@ -70,3 +70,36 @@ const verifyAges = (arr, minimumAge) => {
 }
 
 console.log(verifyAges(people, 18));
+
+// Para fixar - sort
+//1. Utilize a sort para ordenar o array pela idade das pessoas em ordem crescente.
+
+const pessoa = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+pessoa.sort(function (a,b) {
+  return a.age -b.age
+})
+
+console.log(pessoa);
+
+//2. Modifique o sort do exercício anterior para que ordene o array pela idade das pessoas em ordem decrescente.
+
+const pessoa2 = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+pessoa2.sort(function (a,b) {
+  return b.age -a.age
+})
+
+console.log(pessoa2);
