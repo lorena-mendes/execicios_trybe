@@ -10,8 +10,7 @@ const emailListInData = [
   
   const showEmailList = (email) => {
     console.log(`O email ${email} esta cadastrado em nosso banco de dados!`);
-  };
-  
+  };  
   emailListInData.forEach(showEmailList);
 
   // Para fixar find
@@ -21,8 +20,7 @@ const emailListInData = [
 
 const findDivisibleBy3And5 = () => {
   return numbers.find((number) => number % 3 === 0 && number % 5 === 0)
-}
-
+};
 console.log(findDivisibleBy3And5())
 
 //2. Utilize o find para encontrar o primeiro nome com cinco letras, caso ele exista:
@@ -31,8 +29,7 @@ const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
 const findNameWithFiveLetters = () => {
   return names.find((String) => String.length === 5)
-}
-
+};
 console.log(findNameWithFiveLetters());
 
 //3. Utilize o find para encontrar a música com id igual a 31031685, caso ela exista:
@@ -45,6 +42,31 @@ const musicas = [
 
 function findMusic(id) {
   return musicas.find((musica) => musica.id === id)
+};
+console.log(findMusic('31031685'));
+
+//Para fixar some e every
+//1. Escreva uma função que dado um array de nomes e um nome retorne true se ele estiver contido e caso contrário, retorne false, use some;
+
+const nomes = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  return arr.some((nomeDeclarado) => nomeDeclarado === name)
+};
+console.log(hasName(nomes, 'Ana'));
+
+//2.  Escreva uma função que dado um array de pessoas e uma idade mínima retorne true se todas tiverem a idade maior ou igual a mínima e caso contrário false, use every;
+
+const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+const verifyAges = (arr, minimumAge) => {
+  return arr.every((comparaIdade) => comparaIdade.age >= minimumAge)
 }
 
-console.log(findMusic('31031685'));
+console.log(verifyAges(people, 18));
